@@ -12,7 +12,8 @@ function begin() {
     $("#welcome").detach();    	
     $('#step1').toggleClass('hidden');
 };
-var amahiDomain ="jamahi";
+amahiDomain ="jamahi";
+
 ///
 ///Step One
 ///
@@ -22,7 +23,6 @@ function stepOne() {
     if ((ipAddress.value).length < 6 ) {
 	$('#step1').append("<div class=\"alert alert-block\"><span class=\"label label-important\">Important</span>  Please enter the IP Address in the form of x.x.x.x (ex.  192.168.1.10).</div>");	
     } else {
-	/*$('#ip-alert').detach();*/
 	$('#step1').toggleClass('hidden');
 	$('#insertHere').append("<p>Step 1: Your HDA IP address is <span class=\"highlight\"> " +ipAddress.value+ "</span>.</p>");
 	$('#step2').toggleClass('hidden');	
@@ -35,14 +35,14 @@ function stepOne() {
 $('#domain-id').click(stepTwo);
 
 function stepTwo() {
-    //amahiDomain = domain.value;
+    amahiDomain = domain.value;
     if ((domain.value).length < 4) {
 	$('#step2').append("<div class=\"alert alert-block\"><span class=\"label label-important\">Important</span>  Please enter your HDA home domain in the form of name.tld (ex.  amahi.net).</div>");	
     } else {
 	/*$('#domain-id').detach();*/
 	$('#step2').toggleClass('hidden');
 	$('#insertHere').append("<p>Step 2: Your HDA domain name is <span class=\"highlight\">  " +domain.value+ "</span>.</p>");
-	$('#amdom').append('<script type=\"text/javascript\">document.write(amahiDomain)</script>');
+	$('#amdom').append(amahiDomain);
 	$('#step3').toggleClass('hidden');
     };
 
@@ -62,7 +62,6 @@ function stepThree() {
 	
 	
     };
-//console.log(domain.value);
 };
 ///
 ///Step 4
