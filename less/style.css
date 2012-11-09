@@ -1,0 +1,13 @@
+.centered {
+    max-width:320px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.highlight {
+    background-color: yellow;
+}
