@@ -61,7 +61,7 @@
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span12">          
-	 <h1>Interactive Network Troubleshooter</h1>	
+	 <h2>Interactive Network Troubleshooter</h2>	
         </div>
 	</div><!--/row-->
 
@@ -75,16 +75,16 @@
 		</div>
 	  </div>
  	</div><!--/row-->
-      <div class="row-fluid">
+     <!-- <div class="row-fluid">
 	<div class= "span12" id="insertHere">
  	</div>
-      </div> <!-- /row -->
+      </div> --> <!-- /row -->
 	<hr>
       <div class="row-fluid">
 	<div class="span6" id="step-column">
 
   <div class= "hidden" id="step1">
-	 <h2>Step 1:  </h2>
+	 <h3>Step 1:  </h3>
 	<p>What is your HDA <em>internal</em> IP address?
 	<br>If you're unsure, you can see it in your 
 	<a target="_new" href="https://www.amahi.org/user">Amahi.org Control Panel</a>.<br>It should start with one of:
@@ -92,13 +92,13 @@
 	     <li><strong>10.</strong></li>
 	     <li><strong>172.16.</strong></li></ul>
 	<br>
-	<div class="input-append"><input id= "ipAddress" type="text" class="span3 "><input id="ip-address" type="submit" class="btn" value="Continue"></input>
+	<div class="input-append"><input id= "ipAddress" type="text" class="span3" placeholder="19x.16x.x.1x"><input id="ip-address" type="submit" class="btn" value="Continue"></input>
 	
 	  </div><!-- input-append -->
    </div><!--/step1-->
 
    <div class="hidden" id="step2">
-	<h2>Step 2</h2>
+	<h3>Step 2</h3>
 	<p>What is your HDA Home Domain? (Note that the default is <strong>amahi.net</strong>)
 	<br/>
 	If you are unsure, you can see it in your <a href="https://www.amahi.org/user" target="_new">Amahi.org Control Panel</a>.
@@ -108,18 +108,19 @@
    </div> <!-- /step2 -->
 
    <div class="hidden" id="step3">
-	<h2>Step 3</h2>
+	<h3>Step 3</h3>
 	What is your router IP address?
 	<br/>
 	Here's <a href="http://wiki.amahi.org/index.php/Find_Your_Gateway_IP" target="_new">how to find it</a>, if you're not sure.
 	<br/> 
+	<br/>
 		<div class="input-append"><input id= "gatewayIP" type="text" class="span3 "><input id="gateway-id" type="submit" class="btn" value="Continue"></input>	
 	  </div><!-- input-append -->
 
    </div> <!-- input-append -->
 
    <div class="hidden" id= "step4">
-	<h2>Step 4 - DNS resolving for internal hostnames</h2>
+	<h3>Step 4 - DNS resolving for internal hostnames</h3>
 	For the next questions, unless you have internet access working on your HDA, you should SSH into your HDA from another computer, to copy and paste commands and results when needed.
 	<br/>
 	You can read instructions on how to SSH into your HDA <a href="http://wiki.amahi.org/index.php/SSHtoHDA">here</a>.
@@ -133,16 +134,27 @@ Address:    1#53
 
 Name:    <strong style='color:red'>hda.<span id="amdom"></span></strong>
 Address:    <strong style='color:red'>1</strong>
-</pre>
+	</pre>
 	<br/>
+	 <form >
+	 <div id="dnsFourX" class="btn-group" data-toggle="buttons-radio">
+	  <button type="button" name="dns-yes" value="yes" class="yesBtn btn" >Yes</button>	
+	  <button type="button" name="dns-no" value="no" class="noBtn btn">No</button>
+	</div>	
 
+	  <input class="hidden" id="dnsFour" value="0" type="text">
+	  <button id="dnsYesNo" type="submit" onclick="return false" class="btn">Continue</button>
+
+	</form>
 
    </div> <!--step4-->
 	</div> <!--/span6-->
       
 
-          <div class="span6" id="solution-column">
-
+        <div class="span6" id="solution-column">
+	<h3 id="progress" class="hidden">Progress</h3>
+	  <div class= "span12" id="insertHere">
+	  </div>
 
  	  
 	</div> <!--/span6-->
@@ -162,19 +174,19 @@ Address:    <strong style='color:red'>1</strong>
     <!-- Placed at the end of the document so the pages load faster -->
 <!--    <script src="js/scripts.js" type="text/javascript" > </script> -->
     <script src="js/AINT.js" type="text/javascript" > </script>
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
+   <!--<script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script> -->
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+  <!--  <script src="../assets/js/bootstrap-modal.js"></script>
     <script src="../assets/js/bootstrap-dropdown.js"></script>
     <script src="../assets/js/bootstrap-scrollspy.js"></script>
     <script src="../assets/js/bootstrap-tab.js"></script>
     <script src="../assets/js/bootstrap-tooltip.js"></script>
     <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
     <script src="../assets/js/bootstrap-collapse.js"></script>
     <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script> -->
 
   </body>
 </html>
