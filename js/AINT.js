@@ -9,10 +9,9 @@ $(document).ready(function() {
 
 
 function begin() {
-    $("#welcome").detach();    	
+    $('#welcome').collapse('hide');  	
     $('#step1').toggleClass('hidden');
 };
-amahiDomain ="jamahi";
 
 ///
 ///Step One
@@ -23,7 +22,8 @@ function stepOne() {
     if ((ipAddress.value).length < 6 ) {
 	$('#step1').append("<div class=\"alert alert-block\" ><button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button><span class=\"label label-important\">Important</span>  Please enter the IP Address in the form of x.x.x.x (ex.  192.168.1.10).</div>");	
     } else {
-	$('#step1').toggleClass('hidden');
+	//$('#step1').toggleClass('hidden');
+	$('#step1').collapse('hide');
 	$('#progress').toggleClass('hidden');
 	$('#insertHere').append("<p><i class='icon-ok'></i> Step 1: Your HDA IP address is <span class=\"highlight\"> " +ipAddress.value+ "</span>.</p>");
 	$('#step2').toggleClass('hidden');	
@@ -41,7 +41,7 @@ function stepTwo() {
 	$('#step2').append("<div class=\"alert alert-block\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button><span class=\"label label-important\">Important</span>  Please enter your HDA home domain in the form of name.tld (ex.  amahi.net).</div>");	
     } else {
 	/*$('#domain-id').detach();*/
-	$('#step2').toggleClass('hidden');
+	$('#step2').collapse('hide');
 	$('#insertHere').append("<p><i class='icon-ok'></i> Step 2: Your HDA domain name is <span class=\"highlight\">  " +domain.value+ "</span>.</p>");
 	$('#amdom').append(amahiDomain);
 	$('#step3').toggleClass('hidden');
@@ -57,7 +57,7 @@ function stepThree() {
     if ((gatewayIP.value).length < 6) {
 	$('#step3').append("<div class=\"alert alert-block\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button><span class=\"label label-important\">Important</span>  Please enter your IP of your router.</div>");	
     } else {
-	$('#step3').toggleClass('hidden');
+	$('#step3').collapse('hide');
 	$('#insertHere').append("<p><i class='icon-ok'></i> Step 3: Your router IP address is <span class=\"highlight\"> " +gatewayIP.value+ "</span>.</p>");
 	$('#step4').toggleClass('hidden');
 	
@@ -98,8 +98,12 @@ $('#dnsYesNo').click(stepFour);
 function stepFour () {
     if ((dnsFour.value) != "yes" && dnsFour.value != "no") {
 	$('#step4').append("<div class=\"alert alert-block\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button><span class=\"label label-important\">Important</span>  Please select Yes or No. </div>");	
+    } else if ((dnsFour.value) == "no") {
+		$('#insertHere').append('<p><i class="icon-flag"></i>  Step 4: Your HDA DNS server is <strong>NOT</strong> working for <strong class="highlight">local hostnames</strong>.');
+		$('#step4').collapse('hide');
+		$('#step4TS').toggleClass('hidden');
     } else {
-	$('#step4').toggleClass('hidden');
+	$('#step4').collapse('hide');
 	$('#insertHere').append("<p><i class='icon-ok'></i> Step 4: Your HDA DNS server is working fine for <span class='highlight'>local hostnames</span>.</p>");
 	$('#step5').toggleClass('hidden');	
     };

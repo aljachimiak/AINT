@@ -1,0 +1,21 @@
+
+<!-- saved from url=(0049)http://net.pommepause.com/network_troubleshooter/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></head><body><form method="post" action="">
+Step 1: Your HDA IP address is <strong>sadffdsa</strong><br>Step 2: Your HDA domain name is <strong>asdffdsa</strong><br>Step 3: Your router IP address is <strong>dsaasdf</strong><br>Step 4: Your HDA DNS server is <strong>NOT</strong> working fine for <strong>local hostnames</strong>.<br><hr><h2>Troubleshooting for Step 4 - DNS resolving for internal hostnames</h2><input type="hidden" name="last_step" value="4"><label for="q">Execute the following commands on the HDA itself, using either SSH, or a Terminal:
+<pre>su -
+  (enter the root password)
+nslookup hda
+cat /etc/resolv.conf
+ifconfig | grep -A 5 eth0 | grep inet
+service named status
+cat /etc/named.conf
+netstat -an | grep :53
+cat /var/named/dynamic/hda-n2a.conf
+cat /var/named/dynamic/hda-a2n.conf
+</pre>
+Paste the result below.</label><br><textarea id="q" name="answer" cols="80" rows="20"></textarea><br><br>
+<input type="hidden" name="step" value="final">
+<input type="hidden" name="session" value="a:5:{s:6:&quot;hda_ip&quot;;s:8:&quot;sadffdsa&quot;;s:15:&quot;hda_domain_name&quot;;s:8:&quot;asdffdsa&quot;;s:9:&quot;router_ip&quot;;s:7:&quot;dsaasdf&quot;;s:12:&quot;hda_hostname&quot;;s:5:&quot;h000.&quot;;s:11:&quot;dns_working&quot;;b:0;}">
+	<input type="submit" name="submit" value="Continue">
+</form>
+</body></html>
