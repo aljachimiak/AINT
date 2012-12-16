@@ -188,7 +188,7 @@ rtt min/avg/max/mdev = 0.xxx/0.xxx/0.xxx/0.000 ms
     </div>  <!--/step5-->
     
     <div id="step5TS" class="hidden">
-	<h3><span class="text-error"> Troubleshooting for Step 5</span> - Router is reachable?</h3>
+	<h3>Troubleshooting for Step 5 - Router is reachable?</h3>
 		<p>If you have multiple network adapters on your server (maybe an onboard, and a PCI), make sure the cable is plugged in the correct adapter. If you're using Amahi, it needs to be plugged in the adapter identified as eth0. Trying to plug the cable in the other adapter, then retrying the last test, wouldn't hurt!</p><br>
 		<p>If the above doesn't help, execute the following commands on the HDA itself, using either SSH, or a Terminal:
 		<pre>netstat -nr<br>

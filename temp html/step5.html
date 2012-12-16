@@ -1,0 +1,17 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"></head><body><form method="post" action="">
+Step 1: Your HDA IP address is <strong>fdas</strong><br>Step 2: Your HDA domain name is <strong>asdffdas</strong><br>Step 3: Your router IP address is <strong>dsfaasdasdf</strong><br>Step 4: Your HDA DNS server is working fine for <strong>local hostnames</strong>.<br><hr><h2>Step 5 - Router is reachable?</h2>Execute the following command on the HDA itself, using either SSH, or a Terminal:
+<pre>ping -c 1 router</pre>
+Does it result in something like this (verify the parts in <strong style="color:red">red</strong>):
+<pre>PING <strong style="color:red">router.asdffdas</strong> (<strong style="color:red">dsfaasdasdf</strong>) 56(84) bytes of data.
+64 bytes from router.asdffdas (<strong style="color:red">dsfaasdasdf</strong>): icmp_seq=1 ttl=xxx time=0.xxx ms
+
+--- router.asdffdas ping statistics ---
+1 packets transmitted, <strong style="color:red">1 received, 0% packet loss</strong>, time 1ms
+rtt min/avg/max/mdev = 0.xxx/0.xxx/0.xxx/0.000 ms
+</pre><br><input id="q_yes" name="answer" value="1" type="radio"><label for="q_yes">Yes</label><br><input id="q_no" name="answer" value="0" type="radio"><label for="q_no">No</label><br><br>
+<input name="step" value="5" type="hidden">
+<input name="session" value="a:5:{s:6:&quot;hda_ip&quot;;s:4:&quot;fdas&quot;;s:15:&quot;hda_domain_name&quot;;s:8:&quot;asdffdas&quot;;s:9:&quot;router_ip&quot;;s:11:&quot;dsfaasdasdf&quot;;s:12:&quot;hda_hostname&quot;;s:5:&quot;h000.&quot;;s:11:&quot;dns_working&quot;;b:1;}" type="hidden">
+	<input name="submit" value="Continue" type="submit">
+</form>
+</body></html>

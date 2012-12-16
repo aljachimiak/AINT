@@ -132,7 +132,7 @@ function stepFive () {
     if ((gatewayFive.value) != "yes" && gatewayFive.value != "no") {
 	$('#step5').append("<div class=\"alert alert-block\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button><span class=\"label label-important\">Important</span>  Please select Yes or No. </div>");	
     } else if ((gatewayFive.value) == "no") {
-		$('#insertHere').append('<p><i class="icon-flag"></i>  Step 5: Your <span class="highlight">router</span> is <span class= "text-error" >NOT</span> accessible from your HDA server.</p>');
+		$('#insertHere').append('<p><i class="icon-flag"></i>  Step 5: Your <span class="highlight">router</span>is <span class= "text-error" >NOT</span> accessible from your HDA server.</p>');
 		$('#step5').collapse('hide');
 		$('#step5TS').toggleClass('hidden');
     } else {
