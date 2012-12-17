@@ -66,7 +66,6 @@ $('#gateway-id').on('click', function() {
 	$('#step3').collapse('hide');
 	$('#insertHere').append("<p><i class='icon-ok'></i> Step 3: Your router IP address is <span class=\"highlight\"> " +gatewayIP.value+ "</span>.</p>");
 	$('#step4').toggleClass('hidden');
-    //$('#gateIp').append(gatewayIp);
 	
 	
     };
@@ -114,10 +113,6 @@ $('#dnsYesNo').on('click', function() {
 	$('#insertHere').append("<p><i class='icon-ok'></i> Step 4: Your HDA DNS server is working fine for <span class='highlight'>local hostnames</span>.</p>");
 	$('#step5').toggleClass('hidden');	
      $('.gateIp').append(gatewayIp);
-	//$('#amdom2').append(amahiDomain);
-     //$('#amdom3').append(amahiDomain);
-     //$('#gateIp2').append(gatewayIp);
-     //$('#amdom4').append(amahiDomain);
     };
 
 }) ;
