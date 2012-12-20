@@ -11,6 +11,14 @@
 .highlight {
     background-color: #ffe706;
 }
-/*textarea {
-    width: 100%;
-}*/
+
+#step-column {
+    padding-top: 19px;
+}
+
+#progress {
+    color: #333 !important;
+    margin-top: 19px;
+}
+
+

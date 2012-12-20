@@ -333,7 +333,7 @@ Address: <strong class="text-error"><span class="amahiIP"></span></strong>
 
     <div id="step9TS" class="hidden">
 	<h3><span class="text-error">Troubleshooting for Step 9</span> - HDA used as DNS on clients?</h3>
-	<p>Make sure that the DHCP server is disabled on your router, that there is no other DHCP server on your network (another router or Access Point maybe?), and that you correctly <a href="http://wiki.amahi.org/index.php/RenewIP" target="_new">renewed your IP addess</a>.</p><br>
+	<p>Make sure that the DHCP server is disabled on your router, that there is no other DHCP server on your network (another router or Access Point maybe?), and that you correctly <a href="http://wiki.amahi.org/index.php/RenewIP" target="_new">renewed your IP address</a>.</p><br>
 
 	<p>If you can't stop using another DHCP server, you'll need to set the DNS server of your client computer to <strong class="text-error"><span class="amahiIP"></span></strong>.</p><br>
 	<p>Still having issues? Execute the following command on the client computer, using either a command prompt, or a Terminal:</p>
@@ -372,7 +372,7 @@ Address: <strong class="text-error"><span class="amahiIP"></span></strong>
 
     <div id="step10TS" class="hidden">
 	<h3><span class="text-error">Troubleshooting for Step 10</span> - Correct domain on clients?</h3>
-	<p>Make sure that the DHCP server is disabled on your router, that there is no other DHCP server on your network (another router or Access Point maybe?), and that you correctly <a href="http://wiki.amahi.org/index.php/RenewIP" target="_new">renewed your IP addess</a>.</p>
+	<p>Make sure that the DHCP server is disabled on your router, that there is no other DHCP server on your network (another router or Access Point maybe?), and that you correctly <a href="http://wiki.amahi.org/index.php/RenewIP" target="_new">renewed your IP address</a>.</p>
 	<p>If you can't stop using another DHCP server, you'll need to set the domain name of your client computer to <strong class="text-error"><span class="amdom"></span></strong><br>
 	<p>Still having trouble? Head over to the <a href="http://talk.amahi.org" target="blank">Amahi IRC channel</a>, and ask one of the folks there for help.</p>
 	<p class = "text-info"><i>Good Luck! Thanks for choosing Amahi.</i></p>
@@ -386,8 +386,8 @@ Address: <strong class="text-error"><span class="amahiIP"></span></strong>
 	<p>On Mac OS X or Linux:
 	<pre>ping -c 1 router</pre></p>
 	<p>Does it result in something like this (verify the parts in <strong class="text-error">red</strong>):
-	<pre>PING <strong class="text-error">router.<span class="amdom"></span></strong> (<strong class="text-error"><span class="gatewayIP"></span></strong>) 56(84) bytes of data.
-64 bytes from router.<span class="amdom"></span> (<strong class="text-error"><span class="gatewayIP"></span></strong>): icmp_seq=1 ttl=xxx time=0.xxx ms
+	<pre>PING <strong class="text-error">router.<span class="amdom"></span></strong> (<strong class="text-error"><span class="gateIp"></span></strong>) 56(84) bytes of data.
+64 bytes from router.<span class="amdom"></span> (<strong class="text-error"><span class="gateIp"></span></strong>): icmp_seq=1 ttl=xxx time=0.xxx ms
 
 --- router.<span class="amdom"></span> ping statistics ---
 1 packets transmitted, <strong class="text-error">1 received, 0% packet loss</strong>, time 1ms
@@ -425,29 +425,109 @@ traceroute -q 1 -m 5 router</pre></p>
     </div> <!--/step11TS-->
 
     <div id="step12" class="hidden">
+	<h3>Step 12 - Internet reachable from clients?</h3>
+	<p>Execute the following command on the client computer, using either a command prompt, or a Terminal:<p><br>
+	<p>On Windows:
+	<pre>ping -n 1 8.8.8.8</pre></p>
+	<br>
+	<p>On Mac OS X or Linux:
+	<pre>ping -c 1 8.8.8.8
+	</pre></p><br>
+	<p>Does it result in something like this (verify the parts in <strong class="text-error">>red</strong>):
+	<pre>PING <strong class="text-error">8.8.8.8</strong> (<strong class="text-error">8.8.8.8</strong>) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=xxx time=x.xxx ms
 
+--- 8.8.8.8 ping statistics ---
+1 packets transmitted, <strong class="text-error">1 received, 0% packet loss</strong>, time 1ms
+rtt min/avg/max/mdev = x.xxx/x.xxx/x.xxx/0.000 ms
+	</pre>
+	<form >
+	 <div id="internetClTwelveX" class="btn-group" data-toggle="buttons-radio">
+	  <button type="button" name="internetCl-yes" value="yes" class="yesBtn btn" >Yes</button>	
+	  <button type="button" name="internetCl-no" value="no" class="noBtn btn">No</button>
+	</div>	
+
+	  <input class="hidden" id="internetClTwelve" value="0" type="text">
+	  <button id="internetClYesNo" type="submit" onclick="return false" class="btn pull-right">Continue</button>
+
+	</form>
     </div> <!-- /step12 -->
 
     <div id="step12TS" class="hidden">
-	<h1>Step Twelve: Troubleshooting</h1>
+	<h3><strong class="text-error">Troubleshooting for Step 12</strong> - Internet reachable from clients?</h3>
+	<p>Execute the following commands on the client computer, using either a command prompt, or a Terminal:</p><br>
+	<p>On Windows:
+	<pre>route print
+	tracert 8.8.8.8
+	</pre></p>
+	<br>
+	<p>On Mac OS X or Linux:
+	<pre>netstat -nr
+traceroute -q 1 8.8.8.8
+	</pre></p>
+	<br>
+	<ol>	<li>Copy the text generated by that command into a new paste at <a href="http://pastebin.ubuntu.com" target="blank">pastebin.ubuntu.com</a>.</li>
+		<li>After submitting your paste, copy the generated url (from the url bar).</li>
+		<li>Head over to the <a href="http://talk.amahi.org" target="blank">Amahi IRC channel</a>, and share your link with one of the helpful folks there.</li></ol>
+	<p class = "text-info"><i>Good Luck! Thanks for choosing Amahi.</i></p>
     </div> <!--/step12TS-->
 
     <div id="step13" class="hidden">
+	<h3>Step 13 - DNS resolving for external hostnames on clients</h3>
+	<p>Execute the following command on the client computer, using either a command prompt, or a Terminal:</p><br>
+	<p>On Windows:
+	<pre>ping -n 1 amahi.org
+	</pre></p>
+	<br>
+	<p>On Mac OS X or Linux:
+	<pre>ping -c 1 amahi.org
+	</pre></p>
+	<br>	
+	<p>Does it result in something like this (verify the parts in <strong class="text-error">red</strong>):
+	<pre>PING <strong class="text-error">amahi.org</strong> (<strong class="text-error">208.115.201.195</strong>) 56(84) bytes of data.
+64 bytes from mail.amahi.org (208.115.201.195): icmp_seq=1 ttl=xxx time=x.xxx ms
 
+--- amahi.org ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 1ms
+rtt min/avg/max/mdev = x.xxx/x.xxx/x.xxx/0.000 ms
+	</pre><br>
+	<form >
+	 <div id="dnsClThirteenX" class="btn-group" data-toggle="buttons-radio">
+	  <button type="button" name="dnsCl-yes" value="yes" class="yesBtn btn" >Yes</button>	
+	  <button type="button" name="dnsCl-no" value="no" class="noBtn btn">No</button>
+	</div>	
+
+	  <input class="hidden" id="dnsClThirteen" value="0" type="text">
+	  <button id="dnsClYesNo" type="submit" onclick="return false" class="btn pull-right">Continue</button>
+
+	</form>
     </div> <!-- /step13 -->
 
     <div id="step13TS" class="hidden">
-	<h1>Step Thirteen: Troubleshooting</h1>
+<h3><strong class = "text-error">Troubleshooting for Step 13</strong> - DNS resolving for external hostnames on clients</h3>
+	<p>Execute the following command on the client computer, using either a command prompt, or a Terminal:</p>
+	<pre>nslookup amahi.org
+	</pre>
+	<br>
+	<ol>	<li>Copy the text generated by that command into a new paste at <a href="http://pastebin.ubuntu.com" target="blank">pastebin.ubuntu.com</a>.</li>
+		<li>After submitting your paste, copy the generated url (from the url bar).</li>
+		<li>Head over to the <a href="http://talk.amahi.org" target="blank">Amahi IRC channel</a>, and share your link with one of the helpful folks there.</li></ol>
+	<p class = "text-info"><i>Good Luck! Thanks for choosing Amahi.</i></p>
     </div> <!--/step13TS-->
 
-    <div id="complete" class="hidden">
-
-    </div> <!-- /complete -->
+    <div id="step14" class="hidden well">
+	<h3>We couldn't identify any problems on your network.</h3>
+	<hr>
+	<br>
+	<p>If you are still having problems (or you just want to chat), stop by the <a href="http://talk.amahi.org" target="blank">Amahi IRC channel</a>.  
+	<br>
+	<h4 class = "text-info"><i>Thanks for choosing Amahi.</i></h4>
+    </div> <!-- /step14 -->
 
 	</div> <!--/span6-->
       
 
-        <div class="span6" id="solution-column">
+        <div class="span6 hidden" id="solution-column">
 	<h3 id="progress" class="hidden">Progress</h3>
 	  <div class= "span12" id="insertHere">
 	  </div>

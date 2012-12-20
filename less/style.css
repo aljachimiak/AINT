@@ -12,5 +12,16 @@
     background-color: #ffe706;
 }
 
+/*#step-column {
+    padding-top: 19px;
+}*/
 
+#progress {
+    color: #333 !important;
+    
+}
+
+.well {
+    margin-top: 15px;
+}
 

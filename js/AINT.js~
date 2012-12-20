@@ -16,6 +16,7 @@ amahiDomain = "";
 function begin() {
     $('#welcome').collapse('hide');  	
     $('#step1').toggleClass('hidden');
+    $('#solution-column').toggleClass('hidden');
 };
 
 ///
@@ -150,7 +151,7 @@ function stepSix () {
     if ((internetSix.value) != "yes" && internetSix.value != "no") {
 	$('#step6').append("<div class=\"alert alert-block\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button><span class=\"label label-important\">Important</span>  Please select Yes or No. </div>");	
     } else if ((internetSix.value) == "no") {
-		$('#insertHere').append('<p><i class="icon-flag"></i>  Step 6: Your HDA <strong class = "text-error" >cannot access</strong> the <span class="highlight">internet</span> (ping test failed).</p>');
+		$('#insertHere').append('<p><i class="icon-flag"></i>  Step 6: Your HDA <strong class = "text-error" >cannot access</strong> <span class="highlight">the internet</span> (ping test failed).</p>');
 		$('#step6').collapse('hide');
 		$('#step6TS').toggleClass('hidden');
     } else {
@@ -242,7 +243,7 @@ function stepTen () {
 ///
 ///Step 11
 ///
-$('#RouterclYesNo').click(stepEleven);
+$('#routerClYesNo').click(stepEleven);
 
 function stepEleven () {
     if ((routerClEleven.value) != "yes" && routerClEleven.value != "no") {
@@ -261,19 +262,40 @@ function stepEleven () {
 ///
 ///Step 12
 ///
+$('#internetClYesNo').click(stepTwelve);
 
+function stepTwelve () {
+    if ((internetClTwelve.value) != "yes" && internetClTwelve.value != "no") {
+	$('#step12').append("<div class=\"alert alert-block\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button><span class=\"label label-important\">Important</span>  Please select Yes or No. </div>");	
+    } else if ((internetClTwelve.value) == "no") {
+		$('#insertHere').append('<p><i class="icon-flag"></i>  Step 12: You <span class="text-error">CANNOT</span> access <span class="highlight">the internet</span> on your client computer (ping test unsuccessful).</p>');
+		$('#step12').collapse('hide');
+		$('#step12TS').toggleClass('hidden');
+    } else {
+	$('#step12').collapse('hide');
+	$('#insertHere').append("<p><i class='icon-ok'></i> Step 12: You can access <span class='highlight'>the internet</span> on your client computer (ping test successful).</p>"); 
+	$('#step13').toggleClass('hidden');	
+    };
+
+};
 ///
 ///Step 13
 ///
+$('#dnsClYesNo').click(stepThirteen);
 
-///
-///Step 14
-///
+function stepThirteen () {
+    if ((dnsClThirteen.value) != "yes" && dnsClThirteen.value != "no") {
+	$('#step11').append("<div class=\"alert alert-block\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button><span class=\"label label-important\">Important</span>  Please select Yes or No. </div>");	
+    } else if ((dnsClThirteen.value) == "no") {
+		$('#insertHere').append('<p><i class="icon-flag"></i>  Step 13: Your HDA DNS server is <span class="text-error">NOT</span> working fine for <span class="highlight">external hostnames</span> on your client computer.</p>');
+		$('#step13').collapse('hide');
+		$('#step13TS').toggleClass('hidden');
+    } else {
+	$('#step13').collapse('hide');
+	$('#insertHere').append("<p><i class='icon-ok'></i> Step 13: Your HDA DNS server is working fine for <span class='highlight'>external hostnames</span> on your client computer.</p>"); 
+	$('#step14').toggleClass('hidden');	
+    };
 
-///
-///Step 15
-///
+};
 
-///
-///Step 16
-///
+
