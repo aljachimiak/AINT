@@ -11,6 +11,6 @@
 .highlight {
     background-color: #ffe706;
 }
-
-
-
+/*textarea {
+    width: 100%;
+}*/

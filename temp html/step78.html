@@ -1,0 +1,13 @@
+
+<!-- saved from url=(0049)http://net.pommepause.com/network_troubleshooter/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></head><body><form method="post" action="">
+Step 1: Your HDA IP address is <strong>1234321</strong><br>Step 2: Your HDA domain name is <strong>weqreqw</strong><br>Step 3: Your router IP address is <strong>asdfsdaf</strong><br>Step 4: Your HDA DNS server is working fine for <strong>local hostnames</strong>.<br>Step 5: Your router <strong>is accessible</strong> from your HDA server.<br>Step 6: You <strong>can</strong> access the internet (ping test successful).<br>Step 7: Your HDA DNS server is working fine for <strong>external hostnames</strong>.<br><hr><h2>Step 8 - HDA Dashboard accessible?</h2>Execute the following command on the HDA itself, using either SSH, or a Terminal:
+<pre>curl http://hda</pre>
+Does it result in this:
+<pre>&lt;html&gt;&lt;body&gt;You are being &lt;a href="http://hda/user_sessions/new"&gt;redirected&lt;/a&gt;.&lt;/body&gt;&lt;/html&gt;
+</pre><br><input type="radio" id="q_yes" name="answer" value="1"><label for="q_yes">Yes</label><br><input type="radio" id="q_no" name="answer" value="0"><label for="q_no">No</label><br><br>
+<input type="hidden" name="step" value="8">
+<input type="hidden" name="session" value="a:8:{s:6:&quot;hda_ip&quot;;s:7:&quot;1234321&quot;;s:15:&quot;hda_domain_name&quot;;s:7:&quot;weqreqw&quot;;s:9:&quot;router_ip&quot;;s:8:&quot;asdfsdaf&quot;;s:12:&quot;hda_hostname&quot;;s:5:&quot;h000.&quot;;s:11:&quot;dns_working&quot;;b:1;s:17:&quot;router_accessible&quot;;b:1;s:16:&quot;can_ping_outside&quot;;b:1;s:15:&quot;can_dns_outside&quot;;b:1;}">
+	<input type="submit" name="submit" value="Continue">
+</form>
+</body></html>
