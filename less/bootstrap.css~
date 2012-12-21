@@ -2143,8 +2143,6 @@ table th[class*="span"],
   background-color: #c4e3f3;
 }
 
-/*
-NO ICONZ  
 [class^="icon-"],
 [class*=" icon-"] {
   display: inline-block;
@@ -2158,11 +2156,8 @@ NO ICONZ
   background-position: 14px 14px;
   background-repeat: no-repeat;
 }
-NO ICONZ */
-/* White icons with optional class, or on hover/active states of certain elements */
-/*
 
------ NO ICONZ--------
+/* White icons with optional class, or on hover/active states of certain elements */
 
 .icon-white,
 .nav-pills > .active > a > [class^="icon-"],
@@ -2741,7 +2736,6 @@ NO ICONZ */
 .icon-fullscreen {
   background-position: -456px -144px;
 }
------ NO ICONZ ---- */
 
 .dropup,
 .dropdown {

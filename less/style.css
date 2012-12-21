@@ -1,3 +1,115 @@
+/*--------------------------------------
+Amahi Interactive Network Troubleshooter
+---------- Styles.css ------------------
+---------------------------------------*/
+
+/*------------ Fonts ------------------
+font-family: 'Ubuntu Mono', mono;
+font-family: 'Open Sans', sans-serif;
+-------------------------------------*/
+
+/*---
+----- TYPOGRAPHY
+----*/
+body {
+  margin: 0;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-weight: 300;
+  line-height: 1;
+  color: #999999;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 2.63em;
+}
+
+h1 {
+  font-size: 2.53em;
+}
+
+h2 {
+  font-size: 2.09em;
+}
+
+h3 {
+  font-size: 1.66em;
+}
+
+h4 {
+  font-size: 1.22em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: .87em;
+}
+
+h1 small {
+  font-size: 1.66em;
+}
+
+h2 small {
+  font-size: 1.22em;
+}
+
+h3 small {
+  font-size: 1em;
+}
+
+h4 small {
+  font-size: 1em;
+}
+
+pre {
+    font-family: 'Ubuntu Mono', mono; 
+    font-size: 1em;
+    text-rendering: optimizelegibility;
+}
+
+.icon-ok {
+    color: #48b94a;
+    font-size: 1.22em;
+    font-weight: bold;
+}
+
+.icon-flag {
+    color: #b94a48;
+    font-size: 1.22em;
+    font-weight: bold;
+}
+
+
 .centered {
     max-width:320px;
     margin-left:auto;
@@ -24,4 +136,5 @@
 .well {
     margin-top: 15px;
 }
+
 
