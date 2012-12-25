@@ -34,8 +34,8 @@ function stepOne() {
 
      $('#solution-column').toggleClass('hidden');
 	$('#progress').toggleClass('hidden');
-	$('#insertHere').append("<p><i class='icon-ok'></i> Step 1: Your HDA IP address is <span class=\"highlight\"> " +ipAddress.value+ "</span>.</p>");
-	$('#step2').toggleClass('hidden');	
+	$('#insertHere').append("<p><i class='icon-ok'></i> Step 1: Your HDA IP address is <span class=\"highlight\"> " +ipAddress.value+ "</span></p>");
+	$('#step2').toggleClass('hidden');
     }
 };
 
@@ -50,7 +50,7 @@ function stepTwo() {
 	$('#step2').append("<div class=\"alert alert-block\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button><span class=\"label label-important\">Important</span>  Please enter your HDA home domain in the form of name.tld (ex.  amahi.net).</div>");	
     } else {
 	$('#step2').collapse('hide');
-	$('#insertHere').append("<p><i class='icon-ok'></i> Step 2: Your HDA domain name is <span class=\"highlight\">  " +domain.value+ "</span>.</p>");
+	$('#insertHere').append("<p><i class='icon-ok'></i> Step 2: Your HDA domain name is <span class=\"highlight\">  " +domain.value+ "</span></p>");
 
 	$('.amdom').append(amahiDomain);
 	$('#step3').toggleClass('hidden');
@@ -67,7 +67,7 @@ $('#gateway-id').on('click', function() {
 	$('#step3').append("<div class=\"alert alert-block\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button><span class=\"label label-important\">Important</span>  Please enter your IP of your router.</div>");	
     } else {
 	$('#step3').collapse('hide');
-	$('#insertHere').append("<p><i class='icon-ok'></i> Step 3: Your router IP address is <span class=\"highlight\"> " +gatewayIP.value+ "</span>.</p>");
+	$('#insertHere').append("<p><i class='icon-ok'></i> Step 3: Your router IP address is <span class=\"highlight\"> " +gatewayIP.value+ "</span></p>");
 	$('#step4').toggleClass('hidden');
 	
 	
@@ -113,7 +113,7 @@ $('#dnsYesNo').on('click', function() {
 		$('#step4TS').toggleClass('hidden');
     } else {
 	$('#step4').collapse('hide');
-	$('#insertHere').append("<p><i class='icon-ok'></i> Step 4: Your HDA DNS server is working fine for <span class='highlight'>local hostnames</span>.</p>");
+	$('#insertHere').append("<p><i class='icon-ok'></i> Step 4: Your HDA DNS server is working fine for <span class='highlight'>local hostnames</span></p>");
 	$('#step5').toggleClass('hidden');	
  
      $('.gateIp').append(gatewayIp);
@@ -157,7 +157,7 @@ function stepSix () {
 		$('#step6TS').toggleClass('hidden');
     } else {
 	$('#step6').collapse('hide');
-	$('#insertHere').append("<p><i class='icon-ok'></i> Step 6: Your HDA can access <span class='highlight'>the Internet</span>.</p>"); 
+	$('#insertHere').append("<p><i class='icon-ok'></i> Step 6: Your HDA can access <span class='highlight'>the Internet</span></p>"); 
 	$('#step7').toggleClass('hidden');	
     };
 
@@ -172,12 +172,12 @@ function stepSeven () {
     if ((externalSeven.value) != "yes" && externalSeven.value != "no") {
 	$('#step7').append("<div class=\"alert alert-block\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button><span class=\"label label-important\">Important</span>  Please select Yes or No. </div>");	
     } else if ((externalSeven.value) == "no") {
-		$('#insertHere').append('<p><i class="icon-flag"></i>  Step 7: Your HDA DNS server is <strong class="text-error">NOT</strong> working for <span class = "highlight" >external hostnames</span>.</p>');
+		$('#insertHere').append('<p><i class="icon-flag"></i>  Step 7: Your HDA DNS server is <strong class="text-error">NOT</strong> working for <span class = "highlight" >external hostnames</span></p>');
 		$('#step7').collapse('hide');
 		$('#step7TS').toggleClass('hidden');
     } else {
 	$('#step7').collapse('hide');
-	$('#insertHere').append("<p><i class='icon-ok'></i> Step 7: Your HDA DNS server is working fine for <span class = 'highlight' >external hostnames</span>.</p>"); 
+	$('#insertHere').append("<p><i class='icon-ok'></i> Step 7: Your HDA DNS server is working fine for <span class = 'highlight' >external hostnames</span></p>"); 
 	$('#step8').toggleClass('hidden');	
     };
 
@@ -231,12 +231,12 @@ function stepTen () {
     if ((domainTen.value) != "yes" && domainTen.value != "no") {
 	$('#step10').append("<div class=\"alert alert-block\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button><span class=\"label label-important\">Important</span>  Please select Yes or No. </div>");	
     } else if ((domainTen.value) == "no") {
-		$('#insertHere').append('<p><i class="icon-flag"></i>  Step 10: Your client computer <span class="text-error">DOES NOT</span> have the correct <span class="highlight">domain name</span>.</p>');
+		$('#insertHere').append('<p><i class="icon-flag"></i>  Step 10: Your client computer <span class="text-error">DOES NOT</span> have the correct <span class="highlight">domain name</span></p>');
 		$('#step10').collapse('hide');
 		$('#step10TS').toggleClass('hidden');
     } else {
 	$('#step10').collapse('hide');
-	$('#insertHere').append("<p><i class='icon-ok'></i> Step 10: Your client computer has the correct <span class='highlight'>domain name</span>.</p>"); 
+	$('#insertHere').append("<p><i class='icon-ok'></i> Step 10: Your client computer has the correct <span class='highlight'>domain name</span></p>"); 
 	$('#step11').toggleClass('hidden');	
     };
 
